@@ -19,7 +19,12 @@ function SignIn() {
   const navigate = useNavigate();
 
   // onChange function here
-  const onChange = () => {};
+  const onChange = (e) => {
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.id]: e.target.value
+    }));
+  };
 
   return (
     <>
@@ -27,6 +32,7 @@ function SignIn() {
         <header>
           <p className='pageHeader'>Welcome Back!</p>
         </header>
+
         <form>
           <input
             type='email'
@@ -34,7 +40,7 @@ function SignIn() {
             placeholder='Email'
             id='email'
             value={email}
-            onChange={onchange}
+            onChange={onChange}
           />
           <div className='passwordInputDiv'>
             {/* type is conditional */}
