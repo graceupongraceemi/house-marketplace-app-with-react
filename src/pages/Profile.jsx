@@ -1,9 +1,9 @@
 /* eslint-disable */
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { getAuth, updateProfile } from 'firebase/auth';
 import { updateDoc, doc } from 'firebase/firestore';
 import { db } from '../firebase.config';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 // eslint-disable-next-line
